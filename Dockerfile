@@ -1,2 +1,2 @@
-FROM openjdk:21
+# FROM openjdk:21
 CMD echo 'Hello world'
