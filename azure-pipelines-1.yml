@@ -20,3 +20,11 @@ stages:
           command: 'buildAndPush'
           Dockerfile: '**/Dockerfile'
           tags: '$(Build.BuildId)'
+  
+  - stage: DeployDev
+    jobs:
+      - job: DeployDev
+        environment: myenv
+        steps:
+          - script: echo HELLO WORLD
+          
