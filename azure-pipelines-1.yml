@@ -23,8 +23,10 @@ stages:
   
   - stage: DeployDev
     jobs:
-      - job: DeployDev
+      - deployment: deploy
         environment: myenv
-        steps:
-          - script: echo HELLO WORLD
-          
+        strategy:
+         runOnce:
+           deploy:
+             steps:
+               - script: echo HELLO WORLD
